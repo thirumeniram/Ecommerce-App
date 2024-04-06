@@ -69,10 +69,15 @@ const ProductCard = ({ src, alt, name, price, rating }) => {
           {/* Star icons here */}
         </div>
         <div className="flex items-center justify-between">
+      
           <p>
-            <span className="text-3xl font-bold text-slate-900">{price}</span>
-            <span className="text-sm text-slate-900 line-through">{price+50}</span>
+            <span className="text-2xl font-bold text-slate-900">${(price).toFixed(2)}</span>
+            <span className="text-sm text-slate-900 line-through">{((price + 5)).toFixed(2)}</span>
           </p>
+          
+          
+          
+          
           <Link href="#" passHref>
             <button className="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
               Add to cart

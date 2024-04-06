@@ -1,10 +1,11 @@
-import Navbar3 from "@/components/Navbar3";
+
+import SettingsNavbar from "@/components/Settings_Navbar";
 import SelectionForm from "@/components/display_selcection";
 
 export default function Home() {
     return (
         <div>
-       <Navbar3/>
+       <SettingsNavbar/>
        <SelectionForm/>
        </div>
     );

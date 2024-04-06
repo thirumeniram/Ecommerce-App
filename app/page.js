@@ -1,5 +1,6 @@
 import Navbar1 from "@/components/Navbar1";
 import Navbar2 from "@/components/Navbar2";
+import Nav from "@/components/Nav";
 
 import { getProducts } from "@/utils/api";
 import Carousel from "@/components/Carousel";
@@ -12,13 +13,13 @@ export default async function Home() {
 
   const products = await getProducts(20);
 
-  console.log(products);
+  // console.log(products);
   
   return (
    <div>
     {/* <Navbar1/> */}
-    <Navbar2/>
-     
+    {/* <Navbar2/> */}
+    <Nav/>
     {/* <Carousel products={products}/> */}
      <ProductList products={products}/>
    </div>

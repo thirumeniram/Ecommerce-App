@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 const Nav = () => {
   const navbarVariant = useSelector((state) => state.display.navBarVariant);
-  console.log(navbarVariant)
+  
 
   // Conditional component selection based on navbarVariant
   const NavbarComponent = navbarVariant === 'NavBar1' ? Navbar1 : Navbar2;

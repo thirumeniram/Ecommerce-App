@@ -36,7 +36,7 @@ const ProductCard1= ({ id, src, alt, name, price, rating }) => {
             <span className="text-sm text-gray-500 line-through">${price ? (price + 5).toFixed(2) : '5.00'}</span>
           </p>
           {/* Use AddToCartButton component */}
-          <AddToCartButton1 id={id} name={name} price={price} />
+          <AddToCartButton1 id={id} name={name} price={price} image={src}/>
         </div>
       </div>
       

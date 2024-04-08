@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../../redux/slices/cart_slice'; 
 
-const AddToCartButton = ({ id, name, price }) => {
+const AddToCartButton = ({ id, name, price,image }) => {
   const [isAdded, setIsAdded] = useState(false);
   const dispatch = useDispatch();
 
@@ -12,6 +12,7 @@ const AddToCartButton = ({ id, name, price }) => {
       id,
       name,
       price,
+      image
     }));
     setIsAdded(true);
   };

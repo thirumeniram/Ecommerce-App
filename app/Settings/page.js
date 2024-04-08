@@ -1,5 +1,5 @@
 
-import SettingsNavbar from "@/components/Settings_Navbar";
+import SettingsNavbar from "@/components/Navbar/Settings_Navbar";
 import SelectionForm from "@/components/display_selcection";
 
 export default function Home() {

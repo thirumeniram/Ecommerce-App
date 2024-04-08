@@ -1,50 +1,35 @@
+// displaySlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
-// Initial state for the cart
+// Initial state
 const initialState = {
-  items: [],
-  totalQuantity: 0,
-  totalPrice: 0,
+  navBarVariant: 'NavBar1', // Default navigation bar variant
+  productCardVariant: 'ProductCard2', // Default product card variant
+  catalogView: 'carousel', // Default catalog view mode
 };
 
-export const cartSlice = createSlice({
-  name: 'cart',
+export const displaySlice = createSlice({
+  name: 'display',
   initialState,
   reducers: {
-    // Action to add an item to the cart
-    addItemToCart: (state, action) => {
-      const existingIndex = state.items.findIndex(item => item.id === action.payload.id);
-
-      if (existingIndex >= 0) {
-        // If the item already exists, increase the quantity
-        state.items[existingIndex].quantity += 1;
-      } else {
-        // If it's a new item, add it to the cart with quantity 1
-        state.items.push({ ...action.payload, quantity: 1 });
-      }
-
-      state.totalQuantity += 1;
-      state.totalPrice += action.payload.price;
+    // Action to set the navigation bar variant
+    setNavBarVariant: (state, action) => {
+      state.navBarVariant = action.payload;
+      console.log("NavBar variant updated in the store", state.navBarVariant);
     },
-
-    // Action to remove an item from the cart
-    removeItemFromCart: (state, action) => {
-      const existingIndex = state.items.findIndex(item => item.id === action.payload);
-
-      if (existingIndex >= 0) {
-        // Adjust totalQuantity and totalPrice
-        state.totalQuantity -= state.items[existingIndex].quantity;
-        state.totalPrice -= state.items[existingIndex].price * state.items[existingIndex].quantity;
-
-        // Remove the item from the cart
-        state.items.splice(existingIndex, 1);
-      }
+    // Action to set the product card variant
+    setProductCardVariant: (state, action) => {
+      state.productCardVariant = action.payload;
+    },
+    // Action to set the catalog view mode
+    setCatalogView: (state, action) => {
+      state.catalogView = action.payload;
     },
   },
 });
 
 // Export actions
-export const { addItemToCart, removeItemFromCart } = cartSlice.actions;
+export const { setNavBarVariant, setProductCardVariant, setCatalogView } = displaySlice.actions;
 
 // Export the reducer
-export default cartSlice.reducer;
+export default displaySlice.reducer;

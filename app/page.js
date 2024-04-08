@@ -1,10 +1,8 @@
-import Navbar1 from "@/components/Navbar1";
-import Navbar2 from "@/components/Navbar2";
-import Nav from "@/components/Nav";
 
+import Nav from "@/components/Navbar/Nav";
 import { getProducts } from "@/utils/api";
-import Carousel from "@/components/Carousel";
-import ProductList from "@/components/View_all";
+import Catalog from "@/components/Catalog/Catalog";
+
 
 
 export default async function Home() {
@@ -17,11 +15,9 @@ export default async function Home() {
   
   return (
    <div>
-    {/* <Navbar1/> */}
-    {/* <Navbar2/> */}
+ 
     <Nav/>
-    {/* <Carousel products={products}/> */}
-     <ProductList products={products}/>
+    <Catalog products={products}/>
    </div>
   );
 }

@@ -1,39 +1,14 @@
 "use client"
 
-import ProductCard from "./Product _Card";
+import ProductCard from "../ProductCards/Product _Card2";
 import { getProducts } from "@/utils/api";
 import React,{ useState,useEffect} from "react";
 
 const Carousel = ({products}) => {
-    // const [products, setProducts] = useState([]);
-
-    console.log("in carousel",products)
-
-    // useEffect(() => {
-    //   const fetchProducts = async () => {
-    //     const fetchedProducts = await getProducts(20);
-    //     setProducts(fetchedProducts);
-    //   };
-      
-    //   console.log("I got called",products)
-    //   fetchProducts();
-    // }, []);
+   
 
     return (
-    //   <div id="controls-carousel" className="relative w-full" data-carousel="static">
-    //     <div className="relative h-56 overflow-hidden rounded-lg md:h-96 bg-slate-500">
-    //       {products.map((product, index) => (
-    //         <div key={index} className={`hidden duration-700 ease-in-out ${index === 0 ? 'active' : ''}`} data-carousel-item>
-    //           <ProductCard
-    //             src={product.image}
-    //             alt={product.title}
-    //             name={product.title}
-    //             price={product.price}
-    //             rating={product.rating.rate}
-    //           />
-    //         </div>
-    //       ))}
-    //     </div>
+    
     <div id="controls-carousel" className="relative w-full">
     <div className="relative overflow-hidden rounded-lg">
       {products.map((product, index) => (

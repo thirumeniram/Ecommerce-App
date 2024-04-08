@@ -10,9 +10,9 @@ export   async function getProducts (limit = 10)  {
     const products = await response.json();
     return products ;
     
-    // Return the fetched data
+   
   } catch (error) {
     console.error("Could not fetch catalog:", error);
-    return []; // Return an empty array in case of an error
+    return []; 
   }
 };

@@ -1,11 +1,15 @@
-import CartNavbar from "@/components/Cart_Navbar";
+
+import CartNavbar from "@/components/Navbar/Cart_Navbar";
 
 
 
 export default function Home() {
+
+
     return (
         <div>
           <CartNavbar/>
+       
        </div>
     );
   }

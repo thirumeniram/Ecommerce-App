@@ -41,9 +41,9 @@ const Carousel = ({ products }) => {
                 onClick={handlePrevClick}
                 data-carousel-prev
             >
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full  bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none  md:ml-40">
+                <span className="inline-flex items-center justify-center sm:w-10 sm:h-10 h-5 w-5 rounded-full  bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none  md:ml-40">
                     <svg
-                        className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                        className="sm:w-4 sm:h-4 w-2.5 h-2.5 text-white dark:text-gray-800 rtl:rotate-180"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -66,9 +66,9 @@ const Carousel = ({ products }) => {
                 onClick={handleNextClick}
                 data-carousel-next
             >
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full  bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none md:mr-60" >
+                <span className="inline-flex items-center justify-center sm:w-10 sm:h-10 h-5 w-5  rounded-full  bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none md:mr-60" >
                     <svg
-                        className="w-4 h-4 text-white dark:text-gray-800"
+                        className="sm:w-4 sm:h-4 w-2.5 h-2.5  text-white dark:text-gray-800"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

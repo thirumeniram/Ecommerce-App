@@ -3,12 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AddToCartButton from '../Buttons/Cart_button'; 
 
-const ProductCard2 = ({ id, src, alt, name, price = 0, rating }) => {
+const ProductCard3 = ({ id, src, alt, name, price = 0, rating }) => {
  
   
   return (
-   
-    <div className="relative m-10  w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md"> 
+    <div className="relative m-10  max-w-xs overflow-hidden rounded-lg bg-white shadow-md md:ml-[15.625rem] lg:ml-[34.375rem] lg:w-full sm:ml-[5.625rem] sm:w-[12.5rem]">
+
+    
+    {/* <div className="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md  md:ml-[15.625rem] lg:ml-[34.375rem]"> */}
       <Link href="#">
         
           <Image
@@ -32,10 +34,13 @@ const ProductCard2 = ({ id, src, alt, name, price = 0, rating }) => {
           <span className="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">{rating}</span>
        
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <p>
-            <span className="text-2xl font-bold text-slate-900">${price ? price.toFixed(2) : '0.00'}</span>
-            <span className="text-sm text-slate-900 line-through">${price ? (price + 5).toFixed(2) : '5.00'}</span>
+       
+
+          <span className="md:text-2xl font-bold text-slate-900 sm:text-[1rem]">${price ? price.toFixed(2) : '0.00'}</span>
+          <span className=" text-slate-900 line-through sm:text-[10px] md:text-sm" >{price ? (price + 5).toFixed(2) : '5.00'}</span>
+ 
           </p>
           <AddToCartButton id={id} name={name} price={price} image={src} />
         </div>
@@ -44,7 +49,7 @@ const ProductCard2 = ({ id, src, alt, name, price = 0, rating }) => {
   );
 };
 
-export default ProductCard2;
+export default ProductCard3;
 
 
 

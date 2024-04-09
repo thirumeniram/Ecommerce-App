@@ -1,8 +1,7 @@
 
 import { getProducts } from "@/utils/api";
 import Catalog from "@/components/Catalog/Catalog";
-// import Navbar from "@/components/Navbar/Navbar1";
-// import Navbar from "@/components/Navbar/Nav";
+
 import Nav from "@/components/Navbar/Nav";
 
 

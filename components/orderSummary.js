@@ -1,14 +1,14 @@
-// OrderSummary.js
+
 import React from 'react';
 
 const OrderSummary = ({subtotal, shipping, totalQuantity,total }) => {
-  // Function to format a number with 2 decimal places
+  
   const formatNumber = (value) => {
-    // Check if the value is a number
+  
     if (typeof value === 'number') {
       return value.toFixed(2);
     }
-    // If not a number, return the value as is
+
     return value;
   };
 

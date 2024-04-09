@@ -1,23 +1,25 @@
 "use client"
 import React, { useState} from 'react';
-import DynamicProductDisplay from './ProductDisplay';
+
 import { useDispatch,useSelector } from 'react-redux';
+import ProductList from './View_all';
+
+import Carousel from './Carousel';
 
 
 
 const Catalog = ({products}) => {
-  const [viewType, setViewType] = useState('list'); 
-  const navBarVariant = useSelector((state) => state.display.navBarVariant);
+
   const CatalogVariant = useSelector((state) => state.display.catalogView);
+  
 
-
-  // const CardComponent = CatalogVariant === 'list' ? ProductCard1 : ProductCard2;
+   const CatalogComponent = CatalogVariant === 'ViewAll' ? ProductList: Carousel;
   
  
   return (
     <div>
     
-      <DynamicProductDisplay viewType={viewType} products={products} />
+      <CatalogComponent products={products} />
     </div>
   );
 };

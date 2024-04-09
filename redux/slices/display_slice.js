@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   navBarVariant: 'NavBar1', // Default navigation bar variant
   productCardVariant: 'ProductCard2', // Default product card variant
-  catalogView: 'carousel', // Default catalog view mode
+  catalogView: 'ViewAll', // Default catalog view mode
 };
 
 export const displaySlice = createSlice({

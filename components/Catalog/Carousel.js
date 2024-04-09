@@ -1,13 +1,13 @@
 "use client"
-
-
-
-
 import React, { useState } from 'react';
-
+import {useSelector} from 'react-redux'
 import ProductCard3 from '../ProductCards/Producf_Card3';
+import ProductCard4 from '../ProductCards/Product_Card4';
 
 const Carousel = ({ products }) => {
+    const productCardVariant = useSelector((state) => state.display.productCardVariant);
+
+  const CardComponent = productCardVariant === 'ProductCard2' ? ProductCard3 : ProductCard4;
   
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -25,7 +25,7 @@ const Carousel = ({ products }) => {
             <div className="relative overflow-hidden rounded-lg">
                 {products.map((product, index) => (
                     <div key={index} className={`duration-700 ease-in-out ${index === activeIndex ? 'block' : 'hidden'}`} data-carousel-item>
-                        <ProductCard3
+                        <CardComponent
                             src={product.image}
                             alt={product.title}
                             name={product.title}

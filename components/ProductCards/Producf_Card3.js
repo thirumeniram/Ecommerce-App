@@ -10,7 +10,7 @@ const ProductCard3 = ({ id, src, alt, name, price = 0, rating }) => {
     <div className="relative m-10  max-w-xs overflow-hidden rounded-lg bg-white shadow-md md:ml-[15.625rem] lg:ml-[34.375rem] lg:w-full sm:ml-[5.625rem] sm:w-[12.5rem]">
 
     
-    {/* <div className="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md  md:ml-[15.625rem] lg:ml-[34.375rem]"> */}
+   
       <Link href="#">
         
           <Image

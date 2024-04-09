@@ -4,12 +4,13 @@ import Image from 'next/image';
 import AddToCartButton1 from '../Buttons/card_button2';
 import Rating from '../Buttons/ratings';
 
-const ProductCard1= ({ id, src, alt, name, price, rating }) => {
+const ProductCard4= ({ id, src, alt, name, price, rating }) => {
 
  
   
   return (
-    <div className="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md">
+
+    <div className="relative m-10  max-w-xs overflow-hidden rounded-lg bg-white shadow-md md:ml-[15.625rem] lg:ml-[34.375rem] lg:w-full sm:ml-[5.625rem] sm:w-[12.5rem]">
       <Link href="#">
         <Image
           className="h-60 rounded-t-lg object-cover"
@@ -32,10 +33,10 @@ const ProductCard1= ({ id, src, alt, name, price, rating }) => {
         
         <div className="flex items-center justify-between">
           <p>
-            <span className="text-2xl font-bold  text-gray-900">${price ? price.toFixed(2) : '0.00'}</span>
-            <span className="text-sm text-gray-500 line-through">${price ? (price + 5).toFixed(2) : '5.00'}</span>
+            <span className="md:text-2xl font-bold  text-gray-900 sm:text-[1rem]">${price ? price.toFixed(2) : '0.00'}</span>
+            <span className="md:text-sm text-gray-500 line-through sm:text-[8px]">{price ? (price + 5).toFixed(2) : '5.00'}</span>
           </p>
-          {/* Use AddToCartButton component */}
+        
           <AddToCartButton1 id={id} name={name} price={price} image={src}/>
         </div>
       </div>
@@ -44,7 +45,7 @@ const ProductCard1= ({ id, src, alt, name, price, rating }) => {
   );
 };
 
-export default ProductCard1;
+export default ProductCard4;
 
 
 

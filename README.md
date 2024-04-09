@@ -10,6 +10,26 @@ This Next-js ecommerce app connects to an API, displaying a wide range of produc
   - **Redux**
   - **JavaScript**
 
+# Features :
+
+### Catalog Page:
+
+- **Dual Navigation Bars**: Features two navigation bars, with the ability to toggle visibility from the settings page.
+- **Dynamic Catalog Display**: Users can view products in a carousel or a grid layout (view_all). The carousel fetches the first screen of products initially, with navigation buttons for scrolling. 
+- **Product Cards**: Offers two variants of product cards, switchable from the settings page.
+
+### Settings Page:
+
+- **Customization Options**: Allows users to switch between navigation bars (NavBar1, NavBar2) , product card styles (ProductCard1, ProductCard2)  .
+- **Display Mode Selection**: Users can choose how the catalog is displayed, either as a carousel or a view_all grid.
+
+### Additional Features:
+
+- **Responsive Design**: Ensures a mobile-first approach, adapting smoothly to various devices and screen sizes.
+- **Cart Functionality**: Includes the ability to add and remove items from the cart. A bag icon on the navigation bar opens a modal displaying current cart contents.
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

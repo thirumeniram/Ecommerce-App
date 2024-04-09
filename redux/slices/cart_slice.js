@@ -27,7 +27,7 @@ export const cartSlice = createSlice({
     },
 
     removeItemFromCart: (state, action) => {
-      const {  name, price, image }= action.payload;
+      const { id, name, price, image }= action.payload;
       const existingIndex = state.items.findIndex(item => item.name === name);
 
       if (existingIndex >= 0) {
@@ -39,9 +39,9 @@ export const cartSlice = createSlice({
     },
 
     reduceItemQuantity: (state, action) => {
-      const { itemId } = action.payload; // Correctly destructure itemId
+      const { id, name, price, image} = action.payload; // Correctly destructure itemId
     
-      const existingIndex = state.items.findIndex(item => item.id === itemId);
+      const existingIndex = state.items.findIndex(item => item.name === name);
     
       if (existingIndex >= 0 && state.items[existingIndex].quantity > 0) {
         state.items[existingIndex].quantity -= 1;

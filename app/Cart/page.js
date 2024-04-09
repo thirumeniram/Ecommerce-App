@@ -28,23 +28,32 @@ const Home = () => {
         <div className="lg:max-w-7xl max-w-xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8 items-start mt-8">
             <div className="divide-y lg:col-span-2">
-              {/* Conditionally render items if there are items in the cart */}
+            
               {items.length > 0 ? (
                 items.map(item => (
-                  <CartItem key={item.id} item={item} />
+                  <CartItem key={item.id} 
+                    image={item.image}
+                    id={item.id}
+                    name={item.title}
+                    price={item.price}
+                    quantity={item.quantity}
+                  />
                 ))
               ) : (
-                <p>No items in the cart</p>
+                <p className="flex justify-center text-2xl ml-0 lg:ml-[19.5rem]">No items in the cart</p>
+
               )}
             </div>
-            {/* Pass totalQuantity, totalPrice, shipping, tax, and total to OrderSummary component */}
+            {items.length > 0 &&
             <OrderSummary
               totalQuantity={totalQuantity}
               subtotal={subtotal}
               shipping={shipping}
            
               total={total}
+            
             />
+            }
           </div>
         </div>
       </div>

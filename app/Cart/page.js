@@ -1,24 +1,23 @@
 "use client"
 import React from 'react';
-import { useSelector } from 'react-redux'; // Importing useSelector hook
+import { useSelector } from 'react-redux'; 
 import CartNavbar from "@/components/Navbar/Cart_Navbar";
 import CartItem from "@/components/CartItem";
 import OrderSummary from "@/components/orderSummary";
 
 const Home = () => {
-  // Using useSelector to get the cart items from the Redux store
+  
   const items = useSelector(state => state.cart.items);
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
   const totalPrice = useSelector(state => state.cart.totalPrice);
 
   console.log("cart items",items)
 
-  // Calculate subtotal
+
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  // Assuming shipping and tax are fixed values
-  const shipping = 4.00;
   
-  // Calculate total
+  const shipping = 4.00;
+
   const total = subtotal + shipping ;
 
   return (
@@ -32,10 +31,10 @@ const Home = () => {
               {items.length > 0 ? (
                 items.map((item,index) => (
                   <CartItem 
-                  key={item.id} // Use item.id instead of item.title
+                  key={item.id} 
                   image={item.image}
                   id={item.id}
-                  name={item.title} // Assuming item.title is the correct attribute for name
+                  name={item.title} 
                   price={item.price}
                   quantity={item.quantity}
                 />

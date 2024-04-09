@@ -14,7 +14,7 @@ const Catalog = ({products}) => {
   
 
    const CatalogComponent = CatalogVariant === 'viewAll' ? ProductList: Carousel;
-  
+ 
  
   return (
     <div>

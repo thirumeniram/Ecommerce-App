@@ -13,7 +13,7 @@ const Catalog = ({products}) => {
   const CatalogVariant = useSelector((state) => state.display.catalogView);
   
 
-   const CatalogComponent = CatalogVariant === 'ViewAll' ? ProductList: Carousel;
+   const CatalogComponent = CatalogVariant === 'viewAll' ? ProductList: Carousel;
   
  
   return (

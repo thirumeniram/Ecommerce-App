@@ -7,17 +7,26 @@ const CartItem = ( {image,id,price,quantity,name}) => {
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
-    // const { id, name, price, image } = item;
-    dispatch(addItemToCart({id,name,price,image}));
-  };
-
-  const handleReduceItem = () => {
-    dispatch(reduceItemQuantity({ id, name, price, image  })); 
+    console.log("handle item get called")
+    dispatch(addItemToCart({
+      id,
+      name,
+      price,
+      image
+    }));
   };
 
   const handleRemoveItem = () => {
-    dispatch(removeItemFromCart(id, name, price, image )); 
+    console.log("handle item remove called")
+    dispatch(removeItemFromCart({ id, name, price, image }));
   };
+
+  const handleReduceItem = () => {
+    console.log("handle item get reduce called")
+    dispatch(reduceItemQuantity({ id, name, price, image }));
+  };
+
+  
 
   return (
     <div className="flex items-start justify-between gap-4 py-8">
@@ -30,8 +39,8 @@ const CartItem = ( {image,id,price,quantity,name}) => {
           <p className="text-gray-400 text-xs mt-1">{quantity} Item</p>
           <h4 className="text-xl font-bold text-[#333] mt-4">${price}</h4>
           <div className="mt-6">
-            <button type="button" className="flex flex-wrap gap-2 text-xl text-[#333]" onClick={handleReduceItem}>
-              <span className="bg-gray-100 px-2 py-1 rounded">
+            <button type="button" className="flex flex-wrap gap-2 text-xl text-[#333]" >
+              <span className="bg-gray-100 px-2 py-1 rounded" onClick={handleReduceItem}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 fill-current" viewBox="0 0 124 124">
                   <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" data-original="#000000"></path>
                 </svg>

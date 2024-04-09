@@ -11,9 +11,12 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addItemToCart: (state, action) => {
+
+     
       
       const { id, name, price, image } = action.payload;
-      const existingIndex = state.items.findIndex(item => item.name === name);
+      console.log("add button got clicked and this is cart slice ",id)
+      const existingIndex = state.items.findIndex(item => item.id === id);
 
       if (existingIndex >= 0) {
         state.items[existingIndex].quantity += 1;
@@ -28,7 +31,7 @@ export const cartSlice = createSlice({
 
     removeItemFromCart: (state, action) => {
       const { id, name, price, image }= action.payload;
-      const existingIndex = state.items.findIndex(item => item.name === name);
+      const existingIndex = state.items.findIndex(item => item.id === id);
 
       if (existingIndex >= 0) {
         const item = state.items[existingIndex];
@@ -39,22 +42,22 @@ export const cartSlice = createSlice({
     },
 
     reduceItemQuantity: (state, action) => {
-      const { id, name, price, image} = action.payload; // Correctly destructure itemId
-    
-      const existingIndex = state.items.findIndex(item => item.name === name);
-    
+      const { id, name, price, image } = action.payload;
+      const existingIndex = state.items.findIndex(item => item.id === id);
+      
       if (existingIndex >= 0 && state.items[existingIndex].quantity > 0) {
         state.items[existingIndex].quantity -= 1;
         state.items[existingIndex].totalPrice -= state.items[existingIndex].price; 
-    
+        
         if (state.items[existingIndex].quantity === 0) {
           state.items.splice(existingIndex, 1);
         }
-    
+        
         state.totalQuantity -= 1;
-        state.totalPrice -= state.items[existingIndex].price; 
+        state.totalPrice -= price; 
       }
     },
+    
     
   },
 });

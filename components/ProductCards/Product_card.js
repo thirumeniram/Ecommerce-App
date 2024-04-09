@@ -19,6 +19,7 @@ const ProductCard = ({ products }) => {
         {products.map((product, index) => (
           <CardComponent
             key={index}
+            id={product.id}
             src={product.image}
             alt={product.title}
             name={product.title}

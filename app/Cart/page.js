@@ -30,14 +30,15 @@ const Home = () => {
             <div className="divide-y lg:col-span-2">
             
               {items.length > 0 ? (
-                items.map(item => (
-                  <CartItem key={item.id} 
-                    image={item.image}
-                    id={item.id}
-                    name={item.title}
-                    price={item.price}
-                    quantity={item.quantity}
-                  />
+                items.map((item,index) => (
+                  <CartItem 
+                  key={item.id} // Use item.id instead of item.title
+                  image={item.image}
+                  id={item.id}
+                  name={item.title} // Assuming item.title is the correct attribute for name
+                  price={item.price}
+                  quantity={item.quantity}
+                />
                 ))
               ) : (
                 <p className="flex justify-center text-2xl ml-0 lg:ml-[19.5rem]">No items in the cart</p>

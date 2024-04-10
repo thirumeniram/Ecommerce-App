@@ -26,8 +26,14 @@ This Next-js ecommerce app connects to an API, displaying a wide range of produc
 ### Additional Features:
 
 - **Responsive Design**: Ensures a mobile-first approach, adapting smoothly to various devices and screen sizes.
-- **Cart Functionality**: Includes the ability to add and remove items from the cart. A bag icon on the navigation bar opens a modal displaying current cart contents.
 
+### Cart Functionality:
+ 
+ - Includes the ability to add and remove items from the cart. A bag icon on the navigation bar opens a modal displaying current cart contents.
+
+### Checkout Functionality:
+
+- Enables users to proceed to checkout, accessible via a dedicated checkout button in the cart moda
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

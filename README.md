@@ -33,7 +33,7 @@ This Next-js ecommerce app connects to an API, displaying a wide range of produc
 
 ### Checkout Functionality:
 
-- Enables users to proceed to checkout, accessible via a dedicated checkout button in the cart moda
+- Enables users to proceed to checkout, accessible via a dedicated checkout button in the cart page.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

@@ -11,7 +11,7 @@ const Home = () => {
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
   const totalPrice = useSelector(state => state.cart.totalPrice);
 
-  console.log("cart items",items)
+ 
 
 
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);

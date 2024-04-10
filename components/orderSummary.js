@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+import Link from 'next/link';
+
 const OrderSummary = ({subtotal, shipping, totalQuantity,total }) => {
   
   const formatNumber = (value) => {
@@ -21,7 +23,9 @@ const OrderSummary = ({subtotal, shipping, totalQuantity,total }) => {
         <li className="flex flex-wrap gap-4 text-md py-3">Tax <span className="ml-auto font-bold">${formatNumber(shipping)}</span></li>
         <li className="flex flex-wrap gap-4 text-md py-3 font-bold">Total <span className="ml-auto">${formatNumber(total)}</span></li>
       </ul>
+      <Link href="../Checkout">
       <button type="button" className="mt-6 text-md px-6 py-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white rounded">Check out</button>
+      </Link>
     </div>
   );
 };

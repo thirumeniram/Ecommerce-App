@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const CartNavbar = () => {
+const CheckoutNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -18,8 +18,8 @@ const CartNavbar = () => {
         </Link>
 
         <div className="flex-1 flex justify-center">
-        <span className="self-center text-lg md:text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Cart
+        <span className="self-center text-lg md:text-2xl md:ml-[7.5rem]  font-semibold whitespace-nowrap dark:text-white">
+            Checkout
           </span>
         </div>
         
@@ -38,11 +38,16 @@ const CartNavbar = () => {
             </li>
           
             <li>
-            <Link href="../Checkout">
-              <span  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Checkout</span>
+            <Link href="../Settings">
+              <span  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Settings</span>
               </Link>
             </li>
            
+            <li>
+            <Link href="../Settings">
+              <span  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Cart</span>
+              </Link>
+            </li>
            
           </ul>
         </div>
@@ -50,8 +55,11 @@ const CartNavbar = () => {
         <Link href="../">
           <span  className="text-gray-900 dark:text-white text-xl font-semibold whitespace-nowrap  dark:hover:bg-gray-700 px-3 py-2 rounded-md">Home</span>
           </Link>
-        <Link href="../Checkout">
-          <span  className="text-gray-900 dark:text-white  text-xl font-semibold whitespace-nowrap  dark:hover:bg-gray-700 px-3 py-2 rounded-md">Checkout</span>
+        <Link href="../Settings">
+          <span  className="text-gray-900 dark:text-white  text-xl font-semibold whitespace-nowrap  dark:hover:bg-gray-700 px-3 py-2 rounded-md">Settings</span>
+        </Link>
+        <Link href="../Cart">
+          <span  className="text-gray-900 dark:text-white  text-xl font-semibold whitespace-nowrap  dark:hover:bg-gray-700 px-3 py-2 rounded-md">Cart</span>
         </Link>
         </div>
       </div>
@@ -59,4 +67,4 @@ const CartNavbar = () => {
   );
 };
 
-export default CartNavbar;
+export default CheckoutNavbar;

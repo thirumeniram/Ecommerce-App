@@ -7,7 +7,7 @@ const CartItem = ( {image,id,price,quantity,name}) => {
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
-    console.log("handle item get called")
+   
     dispatch(addItemToCart({
       id,
       name,
@@ -17,12 +17,12 @@ const CartItem = ( {image,id,price,quantity,name}) => {
   };
 
   const handleRemoveItem = () => {
-    console.log("handle item remove called")
+   
     dispatch(removeItemFromCart({ id, name, price, image }));
   };
 
   const handleReduceItem = () => {
-    console.log("handle item get reduce called")
+
     dispatch(reduceItemQuantity({ id, name, price, image }));
   };
 

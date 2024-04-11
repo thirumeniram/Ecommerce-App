@@ -12,7 +12,6 @@ const Nav = () => {
   const navbarVariant = useSelector((state) => state.display.navBarVariant);
   
 
-  // Conditional component selection based on navbarVariant
   const NavbarComponent = navbarVariant === 'NavBar1' ? Navbar1 : Navbar2;
 
   return (

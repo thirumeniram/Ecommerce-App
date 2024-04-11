@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import GooglePayMenttButton from './GooglePay';
 
 function CompleteOrderForm() {
     return (
@@ -81,9 +82,10 @@ function CompleteOrderForm() {
                 Cancel
                 <Link/>
                 </button> */}
-              
-                <button type="button" class="rounded-md px-6 py-3 w-full text-sm font-semibold bg-[#333] text-white hover:bg-[#222]">Complete Purchase</button>
+                <GooglePayMenttButton />
+                {/* <button type="button" class="rounded-md px-6 py-3 w-full text-sm font-semibold bg-[#333] text-white hover:bg-[#222]">Complete Purchase</button> */}
               </div>
+              
             </div>
           </form>
       </div>

@@ -2,15 +2,13 @@
 
 import React from 'react';
 import ProductCard1 from './Product_card1';
-// import ProductCard2 from './Product_Card2';
+
 import ProductCard2 from './Product _Card2';
 import { useSelector } from 'react-redux';
 
 const ProductCard = ({ products }) => {
   const productCardVariant = useSelector((state) => state.display.productCardVariant);
-  // This component determines which type of product card to display based on redux state
 
-  // Conditional component selection based on productCardVariant
   const CardComponent = productCardVariant === 'ProductCard1' ? ProductCard1 : ProductCard2;
 
   return (

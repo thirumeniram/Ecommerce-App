@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import Link from 'next/link';
+
 
 const OrderSummary = ({subtotal, shipping, totalQuantity,total }) => {
   

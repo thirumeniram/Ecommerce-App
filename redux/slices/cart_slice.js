@@ -15,7 +15,7 @@ export const cartSlice = createSlice({
      
       
       const { id, name, price, image } = action.payload;
-      console.log("add button got clicked and this is cart slice ",id)
+  
       const existingIndex = state.items.findIndex(item => item.id === id);
 
       if (existingIndex >= 0) {

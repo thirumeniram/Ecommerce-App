@@ -76,12 +76,7 @@ function CompleteOrderForm() {
               </div>
               <div class="flex gap-6 max-sm:flex-col mt-10">
                   
-{/*               
-                <button type="button" class="rounded-md px-6 py-3 w-full text-sm font-semibold  bg-[#ffffff]  hover:bg-gray-100 border-2 text-[#333]">
-                <Link href="../Settings">
-                Cancel
-                <Link/>
-                </button> */}
+
                 <GooglePayMenttButton />
                 {/* <button type="button" class="rounded-md px-6 py-3 w-full text-sm font-semibold bg-[#333] text-white hover:bg-[#222]">Complete Purchase</button> */}
               </div>

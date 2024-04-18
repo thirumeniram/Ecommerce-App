@@ -23,13 +23,19 @@ const ProductCard2 = ({ id, src, alt, name, price = 0, rating }) => {
       </Link>
       <span className="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
       <div className="mt-4 px-5 pb-5">
-        <Link href="#">
+        {/* <Link href="#">
           
-            <h5 className="text-xl font-semibold tracking-tight text-slate-900">{name}</h5>
+            <h5 className="text-xl font-semibold tracking-tight text-slate-900 line-clamp-2">{name}</h5>
         
-        </Link>
+        </Link> */}
+        {/* style={{ height: '60px' }} */}
+        <div className="h-[3.5rem]" >
+            <h5 className="text-xl font-semibold tracking-tight text-slate-900 line-clamp-2">
+              {name}
+            </h5>
+          </div>
         <div className="mt-2.5 mb-5 flex items-center">
-          <span className="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">{rating}</span>
+          <span className="mr-2 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold line-clamp-2">{rating}</span>
        
         </div>
         <div className="flex items-center justify-between">

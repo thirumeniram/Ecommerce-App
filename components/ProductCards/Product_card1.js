@@ -23,9 +23,11 @@ const ProductCard1= ({ id, src, alt, name, price, rating }) => {
       <span className="absolute top-0 right-0 mt-4 mr-4 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">Sale</span>
       <div className="p-5">
      
-        <Link href="#">
-          <h5 className="text-xl font-semibold tracking-tight text-slate-900">{name}</h5>
-        </Link>
+      <div className="h-[3rem]" >
+            <h5 className="text-xl font-semibold tracking-tight text-slate-900 line-clamp-2">
+              {name}
+            </h5>
+          </div>
         
           <Rating rating={rating}/>
          

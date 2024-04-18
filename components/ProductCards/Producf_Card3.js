@@ -27,7 +27,7 @@ const ProductCard3 = ({ id, src, alt, name, price = 0, rating }) => {
       <div className="mt-4 px-5 pb-5">
         <Link href="#">
           
-            <h5 className="text-xl font-semibold tracking-tight text-slate-900">{name}</h5>
+            <h5 className="text-xl font-semibold tracking-tight text-slate-900 line-clamp-2">{name}</h5>
         
         </Link>
         <div className="mt-2.5 mb-5 flex items-center">
